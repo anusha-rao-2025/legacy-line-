@@ -40,48 +40,41 @@
         .toast-transition { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
         .bg-hero { background: radial-gradient(circle at top right, #1e293b 0%, #0f172a 100%); }
 
-        .tree-node-line {
-            position: absolute;
-            background: #e2e8f0;
-            z-index: 0;
-        }
-
+        .tree-node-line { position: absolute; background: #e2e8f0; z-index: 0; }
         #heir-instruction-feed::-webkit-scrollbar { width: 4px; }
         #heir-instruction-feed::-webkit-scrollbar-thumb { background: #334155; border-radius: 10px; }
     </style>
 </head>
-<body class="overflow-x-hidden text-primary">
+<body class="overflow-x-hidden text-primary font-medium">
 
     <!-- 0. LANDING PAGE VIEW -->
     <div id="view-landing" class="min-h-screen bg-white">
-        <!-- Public Header -->
         <nav class="flex justify-between items-center px-8 md:px-20 py-6 border-b border-slate-100 sticky top-0 bg-white/95 backdrop-blur-md z-[100]">
             <div class="flex items-center gap-3">
                 <h1 class="serif text-2xl tracking-tighter text-primary font-bold">LegacyLine<span class="text-accent italic">.it</span></h1>
             </div>
             <div class="hidden lg:flex items-center gap-10 text-xs font-bold uppercase tracking-widest text-primary">
-                <a href="#vision" class="text-slate-600 hover:text-accent transition-colors">Vision</a>
-                <a href="#calculator" class="text-slate-600 hover:text-accent transition-colors">Tax Calculator</a>
-                <a href="#security" class="text-slate-600 hover:text-accent transition-colors">Security</a>
-                <a href="#pricing" class="text-slate-600 hover:text-accent transition-colors">Pricing</a>
+                <a href="#vision" class="hover:text-accent transition-colors">Vision</a>
+                <a href="#calculator" class="hover:text-accent transition-colors">Tax Engine</a>
+                <a href="#testimonials" class="hover:text-accent transition-colors">Testimonials</a>
+                <a href="#pricing" class="hover:text-accent transition-colors">Pricing</a>
                 <button onclick="switchView('auth')" class="bg-primary text-white px-8 py-3 rounded-xl hover:bg-slate-800 transition-all shadow-lg text-xs uppercase tracking-widest font-bold">Access Portal</button>
             </div>
         </nav>
 
-        <!-- Hero Section -->
-        <section class="bg-hero text-white py-24 md:py-32 px-8 md:px-20 relative overflow-hidden">
+        <section class="bg-hero text-white py-24 md:py-32 px-8 md:px-20 relative overflow-hidden text-white">
             <div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none text-white">
                 <i class="fa-solid fa-scale-balanced text-[400px] translate-x-1/2 -translate-y-1/4 rotate-12"></i>
             </div>
             <div class="max-w-4xl relative z-10 space-y-8">
-                <span class="text-accent font-bold uppercase tracking-[0.3em] text-xs">The First Tax-Automated Estate Orchestrator</span>
-                <h2 class="serif text-5xl md:text-7xl leading-tight">Securing wealth for the next <span class="italic text-accent">Italian generation.</span></h2>
-                <p class="text-slate-300 text-lg md:text-xl max-w-2xl leading-relaxed">
-                    Eliminate the "tax mess" for your family. LegacyLine automates financial discovery, tax compliance, and asset distribution with institutional precision.
+                <span class="text-accent font-bold uppercase tracking-[0.3em] text-xs">Protecting a €450B+ Annual EU Legacy</span>
+                <h2 class="serif text-5xl md:text-7xl leading-tight text-white">Don't lose <span class="italic text-accent">30% of your wealth</span> to legal delays.</h2>
+                <p class="text-slate-300 text-lg md:text-xl max-w-2xl leading-relaxed text-white">
+                    LegacyLine automates cross-border settlement for Italian and German estates. Reduce settlement time from 2+ years to under 9 months with 100% audit integrity.
                 </p>
                 <div class="flex flex-wrap gap-4 pt-4">
                     <button onclick="switchView('auth')" class="bg-accent text-slate-900 px-10 py-5 rounded-2xl font-bold text-lg hover:brightness-110 transition-all shadow-xl shadow-accent/20">
-                        Launch Your Estate Node
+                        Initialise Estate Node
                     </button>
                     <a href="#calculator" class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-10 py-5 rounded-2xl font-bold text-lg hover:bg-white/20 transition-all text-center flex items-center justify-center">
                         Free Tax Estimate
@@ -90,59 +83,57 @@
             </div>
         </section>
 
-        <!-- Vision/Features Section -->
-        <section id="vision" class="py-32 px-8 md:px-20 grid grid-cols-1 md:grid-cols-3 gap-12 bg-white border-b border-slate-50 text-primary">
-            <div class="space-y-4">
-                <div class="w-12 h-12 bg-slate-50 text-accent rounded-xl flex items-center justify-center text-2xl shadow-inner"><i class="fa-solid fa-bolt-lightning text-primary"></i></div>
-                <h4 class="serif text-2xl font-bold">Real-Time Intelligence</h4>
-                <p class="text-slate-500 text-sm leading-relaxed font-medium">Continuous synchronization with Italian bank accounts via regulated Open Banking APIs.</p>
+        <!-- KPI Stats -->
+        <section id="vision" class="py-32 px-8 md:px-20 grid grid-cols-1 md:grid-cols-4 gap-12 bg-white border-b border-slate-50 text-primary">
+            <div class="text-center space-y-2">
+                <p class="text-4xl font-bold serif text-accent">9 Mo</p>
+                <p class="text-[10px] uppercase font-bold text-slate-400 tracking-widest">Settlement Target</p>
             </div>
-            <div class="space-y-4">
-                <div class="w-12 h-12 bg-slate-50 text-accent rounded-xl flex items-center justify-center text-2xl shadow-inner"><i class="fa-solid fa-shield-halved text-primary"></i></div>
-                <h4 class="serif text-2xl font-bold">Dual-Key Protection</h4>
-                <p class="text-slate-500 text-sm leading-relaxed font-medium">Secure multi-signature succession triggers. No disbursement occurs without notarized event verification.</p>
+            <div class="text-center space-y-2">
+                <p class="text-4xl font-bold serif text-accent">100%</p>
+                <p class="text-[10px] uppercase font-bold text-slate-400 tracking-widest">Audit Transparency</p>
             </div>
-            <div class="space-y-4">
-                <div class="w-12 h-12 bg-slate-50 text-accent rounded-xl flex items-center justify-center text-2xl shadow-inner"><i class="fa-solid fa-building-columns text-primary"></i></div>
-                <h4 class="serif text-2xl font-bold">Asset-Light Model</h4>
-                <p class="text-slate-500 text-sm leading-relaxed font-medium">LegacyLine holds zero capital. Licensed banks remain the safe custodians of your funds.</p>
+            <div class="text-center space-y-2">
+                <p class="text-4xl font-bold serif text-accent">< 2%</p>
+                <p class="text-[10px] uppercase font-bold text-slate-400 tracking-widest">DTA Risk Exposure</p>
+            </div>
+            <div class="text-center space-y-2">
+                <p class="text-4xl font-bold serif text-accent">< 35%</p>
+                <p class="text-[10px] uppercase font-bold text-slate-400 tracking-widest">Heir Stress Rate</p>
             </div>
         </section>
 
-        <!-- FREE TAX CALCULATOR SECTION -->
+        <!-- Calculator Section -->
         <section id="calculator" class="py-32 px-8 md:px-20 bg-white text-primary">
             <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                 <div class="space-y-6">
-                    <h3 class="serif text-4xl md:text-5xl font-bold">Free Estate Tax Calculator</h3>
-                    <p class="text-slate-500 leading-relaxed font-medium text-lg">Calculate your projected tax liability under the Italian Civil Code instantly. Understand your family's €1M exemption threshold before you start planning.</p>
-                    <div class="flex flex-col gap-4 text-sm font-bold uppercase tracking-widest text-slate-400">
-                        <span class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-success"></i> Includes 4% Direct Descendant Logic</span>
-                        <span class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-success"></i> Dynamic Exemption Pooling</span>
-                    </div>
+                    <h3 class="serif text-4xl md:text-5xl font-bold">Tax Orchestration Engine</h3>
+                    <p class="text-slate-500 leading-relaxed font-medium text-lg">Italian law requires the <i>Dichiarazione di Successione</i> within 12 months of death. failure results in severe penalties.</p>
                 </div>
                 <div class="glass-card p-10 rounded-[40px] bg-slate-50 border-slate-200 shadow-xl">
                     <div class="space-y-6">
                         <div>
-                            <label class="text-[10px] font-bold uppercase text-slate-400 mb-2 block tracking-widest">Total Estate Value (EUR)</label>
-                            <input type="number" id="calc-estate-value" value="2500000" class="w-full bg-white border border-slate-200 rounded-2xl px-6 py-4 text-xl font-bold outline-none focus:border-accent" oninput="runPublicCalculator()">
+                            <label class="text-[10px] font-bold uppercase text-slate-400 mb-2 block tracking-widest">Aggregate Estate Wealth (EUR)</label>
+                            <input type="number" id="calc-estate-value" value="2500000" class="w-full bg-white border border-slate-200 rounded-2xl px-6 py-4 text-xl font-bold outline-none focus:border-accent text-primary" oninput="runPublicCalculator()">
                         </div>
                         <div>
-                            <label class="text-[10px] font-bold uppercase text-slate-400 mb-2 block tracking-widest">Number of Direct Heirs (Spouse/Children)</label>
-                            <input type="number" id="calc-heir-count" value="2" class="w-full bg-white border border-slate-200 rounded-2xl px-6 py-4 text-xl font-bold outline-none focus:border-accent" oninput="runPublicCalculator()">
+                            <label class="text-[10px] font-bold uppercase text-slate-400 mb-2 block tracking-widest font-bold">Category of Heir</label>
+                            <select id="calc-heir-type" class="w-full bg-white border border-slate-200 rounded-2xl px-6 py-4 text-sm font-bold outline-none focus:border-accent text-primary" onchange="runPublicCalculator()">
+                                <option value="direct">Spouse / Child / Parent (€1M Allow | 4%)</option>
+                                <option value="sibling">Siblings (€100k Allow | 6%)</option>
+                                <option value="relative">Relatives to 4th Degree (No Allow | 6%)</option>
+                                <option value="other">Other Heirs / Non-Related (No Allow | 8%)</option>
+                            </select>
                         </div>
-                        <div class="pt-6 border-t border-slate-200 space-y-4">
-                            <div class="flex justify-between text-sm">
-                                <span class="text-slate-500 font-medium">Exemption Pool (Total)</span>
-                                <span class="font-bold text-primary" id="calc-exemption-val">€ 2,000,000</span>
-                            </div>
+                        <div class="pt-6 border-t border-slate-200">
                             <div class="flex justify-between items-center p-6 bg-slate-900 rounded-[28px] text-white">
                                 <div>
-                                    <p class="text-[10px] uppercase font-bold text-accent tracking-widest mb-1">Estimated Tax</p>
-                                    <p class="text-3xl font-bold serif" id="calc-tax-val">€ 20,000</p>
+                                    <p class="text-[10px] uppercase font-bold text-accent tracking-widest mb-1">Projected liability</p>
+                                    <p class="text-3xl font-bold serif" id="calc-tax-val">€ 60,000</p>
                                 </div>
                                 <div class="text-right">
-                                    <p class="text-[10px] uppercase font-bold text-slate-400 mb-1">Effective Rate</p>
-                                    <p class="text-xl font-bold opacity-80" id="calc-rate-val">0.80%</p>
+                                    <p class="text-[10px] uppercase font-bold text-slate-400 mb-1">Rate</p>
+                                    <p class="text-xl font-bold opacity-80" id="calc-rate-display">4%</p>
                                 </div>
                             </div>
                         </div>
@@ -151,135 +142,79 @@
             </div>
         </section>
 
-        <!-- Security Section -->
-        <section id="security" class="py-32 px-8 md:px-20 bg-slate-900 text-white">
-            <div class="max-w-4xl space-y-8">
-                <span class="text-accent font-bold uppercase tracking-[0.2em] text-xs">Institutional Standard</span>
-                <h3 class="serif text-4xl md:text-5xl font-bold">Your Legacy, Hardened.</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
-                    <div class="space-y-4 text-slate-300">
-                        <h5 class="font-bold text-lg flex items-center gap-3 text-white"><i class="fa-solid fa-lock text-accent"></i> AES-256 Encryption</h5>
-                        <p class="text-sm leading-relaxed font-medium">All estate metadata is encrypted at the hardware level. Only verified heirs and authorized notaries can trigger decryption keys.</p>
+        <!-- Testimonials -->
+        <section id="testimonials" class="py-32 px-8 md:px-20 bg-slate-900 text-white overflow-hidden relative">
+            <div class="max-w-6xl mx-auto space-y-16 relative z-10 text-center">
+                <span class="text-accent font-bold uppercase tracking-[0.3em] text-xs">Customer Success</span>
+                <h3 class="serif text-4xl md:text-6xl text-white">Voices of Legacy</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center text-white">
+                    <div class="p-8 bg-white/5 border border-white/10 rounded-[40px] space-y-4">
+                        <div class="w-16 h-16 rounded-full bg-slate-800 border border-accent mx-auto flex items-center justify-center text-accent">MB</div>
+                        <p class="text-slate-400 italic">"LegacyLine turned a taboo subject into a controllable, automated plan."</p>
+                        <p class="font-bold text-xs uppercase text-accent">Marco Bianchi</p>
                     </div>
-                    <div class="space-y-4 text-slate-300">
-                        <h5 class="font-bold text-lg flex items-center gap-3 text-white"><i class="fa-solid fa-user-shield text-accent"></i> Multi-Sig Governance</h5>
-                        <p class="text-sm leading-relaxed font-medium">Disbursements are protected by a '2-of-2' signature requirement: Life Event validation + Notarial Protocol.</p>
+                    <div class="p-8 bg-white/5 border border-white/10 rounded-[40px] space-y-4">
+                        <div class="w-16 h-16 rounded-full bg-slate-800 border border-accent mx-auto flex items-center justify-center text-accent">GC</div>
+                        <p class="text-slate-400 italic">"Absolute peace of mind while living abroad. Transparent and accurate."</p>
+                        <p class="font-bold text-xs uppercase text-accent">Giulia Conti</p>
+                    </div>
+                    <div class="p-8 bg-white/5 border border-white/10 rounded-[40px] space-y-4">
+                        <div class="w-16 h-16 rounded-full bg-slate-800 border border-accent mx-auto flex items-center justify-center text-accent">AD</div>
+                        <p class="text-slate-400 italic">"A unified audit-trail coordinating my multi-jurisdictional estate."</p>
+                        <p class="font-bold text-xs uppercase text-accent">Anne Dupont</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Pricing Section -->
-        <section id="pricing" class="py-32 px-8 md:px-20 bg-slate-50 text-primary">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                <h3 class="serif text-4xl md:text-5xl font-bold">Institutional Pricing</h3>
-                <p class="text-slate-500 text-lg italic font-medium">"Start free. Pay only when you need more."</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <div class="glass-card p-10 rounded-[40px] flex flex-col h-full bg-white">
-                    <div class="mb-8">
-                        <h4 class="font-bold text-slate-400 uppercase tracking-widest text-xs mb-2">Essential</h4>
-                        <p class="serif text-4xl font-bold">Free</p>
-                        <p class="text-slate-400 text-sm mt-1 font-medium">€0 forever</p>
-                    </div>
-                    <ul class="space-y-4 text-sm text-slate-600 mb-10 flex-1 font-medium">
-                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-success mt-1"></i> Real-time tax estimate</li>
-                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-success mt-1"></i> Dynamic Tax Heatmap</li>
-                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-success mt-1"></i> No credit card required</li>
-                    </ul>
-                    <button onclick="switchView('auth')" class="w-full py-4 border-2 border-primary rounded-2xl font-bold hover:bg-slate-50 transition-all text-xs uppercase tracking-widest">Get Started</button>
+        <!-- Pricing -->
+        <section id="pricing" class="py-32 px-8 md:px-20 bg-slate-50 text-primary text-center">
+            <h3 class="serif text-4xl md:text-5xl font-bold">Institutional Pricing</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-16 text-left">
+                <div class="glass-card p-10 rounded-[40px] bg-white flex flex-col h-full text-primary">
+                    <p class="serif text-3xl font-bold">Free</p>
+                    <p class="text-slate-400 text-sm mb-10">€0 forever</p>
+                    <button onclick="switchView('auth')" class="w-full py-4 border-2 border-primary rounded-2xl font-bold text-xs uppercase tracking-widest text-primary">Get Started</button>
                 </div>
-
-                <div class="glass-card p-10 rounded-[40px] flex flex-col h-full bg-white relative border-2 border-accent">
-                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-white px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-lg">14-Day Free Trial</div>
-                    <div class="mb-8">
-                        <h4 class="font-bold text-accent uppercase tracking-widest text-xs mb-2 text-accent">Premium</h4>
-                        <div class="flex items-baseline gap-1">
-                            <span class="serif text-4xl font-bold">€14</span>
-                            <span class="text-slate-400 text-sm font-medium">avg/mo</span>
-                        </div>
-                        <p class="text-slate-400 text-[10px] mt-2 italic font-medium uppercase tracking-tighter">Includes all automation advisor features</p>
-                    </div>
-                    <ul class="space-y-4 text-sm text-slate-600 mb-10 flex-1 font-medium text-primary">
-                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-success mt-1"></i> Full Logbook Access</li>
-                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-success mt-1"></i> Gifting Automation Advisor</li>
-                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-success mt-1"></i> Notary-ready PDF reports</li>
-                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-success mt-1"></i> Priority Support</li>
-                    </ul>
-                    <div class="space-y-3">
-                        <button onclick="startTrialWorkflow()" class="w-full py-4 bg-accent text-white rounded-2xl font-bold shadow-xl hover:brightness-110 transition-all text-xs uppercase tracking-widest">Start 14-Day Free Trial</button>
-                        <button onclick="handlePremiumClick()" class="w-full py-3 text-slate-400 text-[10px] font-bold uppercase tracking-[0.2em] hover:text-primary transition-colors">Professional Onboarding</button>
-                    </div>
+                <div class="glass-card p-10 rounded-[40px] bg-white border-2 border-accent relative shadow-xl flex flex-col h-full text-primary">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-white px-4 py-1 rounded-full text-[10px] font-bold uppercase">14-Day Free Trial</div>
+                    <p class="serif text-3xl font-bold">Premium</p>
+                    <p class="text-slate-400 text-sm mb-10">€14/mo average</p>
+                    <button onclick="startTrialWorkflow()" class="w-full py-4 bg-accent text-white rounded-2xl font-bold text-xs uppercase tracking-widest shadow-lg">Start Trial</button>
                 </div>
-
-                <div class="glass-card p-10 rounded-[40px] flex flex-col h-full bg-slate-900 text-white shadow-2xl">
-                    <div class="mb-8">
-                        <h4 class="font-bold text-accent uppercase tracking-widest text-xs mb-2 text-accent">Settlement</h4>
-                        <p class="serif text-3xl font-bold text-white">Per-Act Fee</p>
-                        <p class="text-slate-400 text-sm mt-1 font-medium">Max €300 capped</p>
-                    </div>
-                    <div class="flex-1 space-y-6">
-                        <p class="text-sm text-slate-400 leading-relaxed italic border-l-2 border-accent pl-4 font-medium">"No surprises. The per-act fee is fair for estates of all sizes."</p>
-                        <ul class="space-y-4 text-sm text-slate-300 font-medium text-white">
-                            <li class="flex items-start gap-3"><i class="fa-solid fa-check text-accent mt-1"></i> One-time execution fee</li>
-                            <li class="flex items-start gap-3"><i class="fa-solid fa-check text-accent mt-1"></i> Automated disbursement</li>
-                            <li class="flex items-start gap-3"><i class="fa-solid fa-check text-accent mt-1"></i> Zero additional cost</li>
-                        </ul>
-                    </div>
-                    <button onclick="switchView('auth')" class="w-full py-4 bg-accent text-slate-900 rounded-2xl font-bold mt-10 hover:brightness-110 text-xs uppercase tracking-widest font-bold">Access Node</button>
+                <div class="glass-card p-10 rounded-[40px] bg-slate-900 text-white flex flex-col h-full">
+                    <p class="serif text-3xl font-bold">Settlement</p>
+                    <p class="text-slate-400 text-sm mb-10">Max €300 capped</p>
+                    <button onclick="switchView('auth')" class="w-full py-4 bg-accent text-slate-900 rounded-2xl font-bold text-xs uppercase tracking-widest">Launch Node</button>
                 </div>
             </div>
         </section>
 
-        <footer class="bg-white py-12 px-8 md:px-20 border-t border-slate-200 text-center text-primary">
-            <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">© 2026 LegacyLine S.p.A. | Milan | PSD2 Compliant Node</p>
+        <footer class="bg-white py-12 px-8 border-t border-slate-200 text-center text-primary text-[10px] uppercase font-bold tracking-widest opacity-60">
+            DORA Compliant • GDPR Art. 30 Certified • PSD2 Regulated Node
         </footer>
     </div>
 
-    <!-- 0.5 AUTH GATEWAY -->
+    <!-- AUTH GATEWAY -->
     <div id="view-auth" class="min-h-screen bg-slate-50 hidden flex items-center justify-center p-6 text-primary">
         <div class="max-w-4xl w-full grid grid-cols-1 lg:grid-cols-2 glass-card rounded-[40px] overflow-hidden shadow-2xl">
-            <div class="bg-hero p-12 text-white flex flex-col justify-between hidden lg:flex">
-                <h1 class="serif text-2xl tracking-tighter font-bold text-white text-white">LegacyLine<span class="text-accent italic">.it</span></h1>
-                <div class="space-y-6 text-white text-white">
-                    <h2 class="serif text-4xl leading-tight">Your Institutional Estate Node.</h2>
+            <div class="bg-hero p-12 text-white flex flex-col justify-between hidden lg:flex text-white">
+                <h1 class="serif text-2xl tracking-tighter font-bold">LegacyLine.it</h1>
+                <div class="space-y-6">
+                    <h2 class="serif text-4xl leading-tight">Institutional Estate Node.</h2>
                     <p class="text-slate-400 text-sm leading-relaxed font-medium">Securely manage inheritance tax and automate asset discovery with bank-grade encryption.</p>
                 </div>
-                <p class="text-[10px] text-slate-500 font-medium uppercase tracking-widest text-white text-white">© 2026 MILAN | LOMBARDY</p>
+                <p class="text-[10px] text-slate-500 font-medium uppercase text-white opacity-40">© 2026 MILAN | LOMBARDY</p>
             </div>
-            
             <div class="p-10 md:p-16 bg-white space-y-8">
-                <div class="text-center lg:text-left text-primary">
-                    <h3 class="serif text-3xl font-bold text-primary" id="auth-title">Initialize Node</h3>
-                    <p class="text-slate-400 text-sm mt-2 font-medium" id="auth-subtitle">Create your private orchestrator account.</p>
+                <h3 class="serif text-3xl font-bold text-primary">Access Portal</h3>
+                <div class="space-y-4">
+                    <div class="space-y-1"><label class="text-[10px] font-bold uppercase text-slate-400">Email Address</label><input type="email" value="m.rossi@privatewealth.it" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:border-accent outline-none font-medium"></div>
+                    <div class="space-y-1"><label class="text-[10px] font-bold uppercase text-slate-400">Security Key</label><input type="password" value="password" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:border-accent outline-none font-bold"></div>
                 </div>
-
-                <div class="space-y-4 text-primary">
-                    <div class="space-y-1">
-                        <label class="text-[10px] font-bold uppercase text-slate-400 tracking-widest">Email Address</label>
-                        <input type="email" placeholder="m.rossi@privatewealth.it" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:border-accent outline-none font-medium text-primary">
-                    </div>
-                    <div class="space-y-1">
-                        <label class="text-[10px] font-bold uppercase text-slate-400 tracking-widest">Private Key</label>
-                        <input type="password" placeholder="••••••••" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:border-accent outline-none font-bold text-primary">
-                    </div>
-                </div>
-
-                <div class="space-y-4 pt-4">
-                    <button onclick="finalizeAuth()" class="w-full bg-primary text-white py-4 rounded-2xl font-bold shadow-xl hover:bg-slate-800 transition-all uppercase text-xs tracking-widest font-bold">Access Portal</button>
-                    <p class="text-center text-[11px] text-slate-400 font-medium">Authorized by LegacyLine Security Protocol.</p>
-                </div>
-
-                <div class="border-t border-slate-100 pt-8 text-center text-primary">
-                    <p class="text-xs text-slate-500 font-medium" id="auth-toggle-text text-primary">Already have a node initialized?</p>
-                    <button onclick="toggleAuthMode()" class="text-xs font-bold text-accent uppercase tracking-widest mt-2 hover:underline font-bold" id="auth-toggle-btn text-primary">Switch to Login</button>
-                </div>
+                <button onclick="finalizeAuth()" class="w-full bg-primary text-white py-4 rounded-2xl font-bold uppercase text-xs tracking-widest shadow-xl">Confirm Handshake</button>
             </div>
         </div>
-        <button onclick="switchView('landing')" class="fixed top-8 right-8 text-slate-400 hover:text-primary transition-colors flex items-center gap-2 font-bold uppercase text-[10px] tracking-widest">
-            <i class="fa-solid fa-arrow-left"></i> Back to Site
-        </button>
     </div>
 
     <!-- PRIVATE WORKSPACE -->
@@ -288,73 +223,90 @@
             <div class="p-8">
                 <h1 class="serif text-2xl tracking-tighter flex items-center gap-2 text-white font-bold"><span class="text-accent italic">L</span>egacyLine</h1>
                 <p class="text-[10px] uppercase tracking-widest text-slate-400 mt-1 opacity-60">Milan | Orchestrator</p>
-                <!-- Trial Badge -->
+                <div class="mt-8 space-y-2">
+                    <div class="flex justify-between text-[8px] font-bold text-accent uppercase tracking-widest"><span>Node Integrity</span><span id="onboarding-perc">70%</span></div>
+                    <div class="w-full h-1 bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-accent transition-all duration-1000" id="onboarding-bar" style="width: 70%"></div></div>
+                </div>
                 <div id="trial-badge" class="mt-6 bg-accent/20 border border-accent/30 rounded-xl p-3 text-center hidden">
-                    <p class="text-[9px] uppercase font-bold text-accent tracking-widest mb-1">Premium Trial Active</p>
-                    <p class="text-xs font-bold text-white">14 Days Remaining</p>
+                    <p class="text-[9px] uppercase font-bold text-accent tracking-widest mb-1 text-white">Premium Trial Active</p>
+                    <p class="text-xs font-bold text-white text-white">14 Days Remaining</p>
                 </div>
             </div>
 
             <nav class="mt-4 flex-1">
                 <button onclick="switchView('founder')" id="nav-founder" class="sidebar-link active w-full flex items-center px-8 py-4 transition-all text-white border-0"><i class="fa-solid fa-house-user w-5 text-sm"></i><span class="ml-3 text-sm font-medium">Founder Desk</span></button>
-                <button onclick="switchView('succession')" id="nav-succession" class="sidebar-link w-full flex items-center px-8 py-4 transition-all text-white border-0"><i class="fa-solid fa-lock-open w-5 text-sm text-white"></i><span class="ml-3 text-sm font-medium text-white">Succession Portal</span></button>
-                <button onclick="switchView('heir')" id="nav-heir" class="sidebar-link w-full flex items-center px-8 py-4 transition-all text-white border-0"><i class="fa-solid fa-users-viewfinder w-5 text-sm text-white"></i><span class="ml-3 text-sm font-medium text-white">Heir Workspace</span></button>
-                <div class="px-8 mt-10 mb-2 text-white opacity-40 uppercase"><p class="text-[10px] font-bold tracking-widest">Account</p></div>
-                <button onclick="switchView('profile')" id="nav-profile" class="sidebar-link w-full flex items-center px-8 py-4 transition-all text-white border-0"><i class="fa-solid fa-user-gear w-5 text-sm"></i><span class="ml-3 text-sm font-medium">Client Profile</span></button>
+                <button onclick="switchView('succession')" id="nav-succession" class="sidebar-link w-full flex items-center px-8 py-4 transition-all text-white border-0"><i class="fa-solid fa-lock-open w-5 text-sm"></i><span class="ml-3 text-sm font-medium text-white">Succession Portal</span></button>
+                <button onclick="switchView('heir')" id="nav-heir" class="sidebar-link w-full flex items-center px-8 py-4 transition-all text-white border-0"><i class="fa-solid fa-users-viewfinder w-5 text-sm text-white"></i><span class="ml-3 text-sm font-medium text-white text-white">Heir Workspace</span></button>
+                <button onclick="switchView('integrity')" id="nav-integrity" class="sidebar-link w-full flex items-center px-8 py-4 transition-all text-white border-0"><i class="fa-solid fa-shield-halved w-5 text-sm text-white"></i><span class="ml-3 text-sm font-medium text-white text-white">Node Integrity</span></button>
+                <div class="px-8 mt-10 mb-2 text-white opacity-40 uppercase font-bold"><p class="text-[10px] font-bold tracking-widest">Settings</p></div>
+                <button onclick="switchView('profile')" id="nav-profile" class="sidebar-link w-full flex items-center px-8 py-4 transition-all text-white border-0"><i class="fa-solid fa-user-gear w-5 text-sm"></i><span class="ml-3 text-sm font-medium text-white">Client Profile</span></button>
             </nav>
-
-            <button onclick="switchView('landing')" class="p-8 border-t border-slate-800 bg-slate-950/50 flex items-center gap-3 hover:bg-slate-900 transition-colors">
+            <button onclick="switchView('landing')" class="p-8 border-t border-slate-800 bg-slate-950/50 flex items-center gap-3 hover:bg-slate-900 transition-colors text-white">
                 <i class="fa-solid fa-right-from-bracket text-slate-500"></i>
-                <span class="text-xs font-semibold text-slate-400 text-white font-bold uppercase tracking-widest">Logout</span>
+                <span class="text-xs font-semibold text-white uppercase font-bold tracking-widest">Sign Out</span>
             </button>
         </aside>
 
         <main class="flex-1 md:ml-64 p-4 md:p-10 pb-32">
             <div id="view-founder" class="portal-content hidden space-y-10 text-primary">
                 <header class="flex justify-between items-start gap-6 text-primary">
-                    <div class="space-y-1 text-primary">
-                        <h2 class="serif text-4xl profile-name-display font-bold">Marco Rossi</h2>
-                        <p class="text-slate-500 flex items-center gap-2 text-sm font-medium"><span class="w-2 h-2 rounded-full bg-success"></span>Live Sync: <span id="sync-provider" class="font-bold text-slate-700">Intesa Sanpaolo</span></p>
+                    <div class="space-y-1">
+                        <h2 class="serif text-4xl profile-name-display font-bold text-primary">Marco Rossi</h2>
+                        <p class="text-slate-500 flex items-center gap-2 text-sm font-medium"><span class="w-2 h-2 rounded-full bg-success"></span>Node Status: <span class="font-bold text-slate-700 uppercase">Optimised</span></p>
                     </div>
-                    <button onclick="openDiscoveryModal()" class="bg-primary text-white px-6 py-3 rounded-xl text-sm font-bold shadow-lg hover:opacity-90 transition-all flex items-center gap-3"><i class="fa-solid fa-circle-plus"></i> Expand Portfolio</button>
+                    <button onclick="openDiscoveryModal()" class="bg-primary text-white px-6 py-3 rounded-xl text-sm font-bold shadow-lg hover:opacity-90 transition-all flex items-center gap-3">Declare Asset</button>
                 </header>
 
-                <div class="grid grid-cols-1 xl:grid-cols-12 gap-8">
+                <div class="grid grid-cols-1 xl:grid-cols-12 gap-8 text-primary">
                     <div class="xl:col-span-8 space-y-8 text-primary">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="glass-card p-8 rounded-3xl relative overflow-hidden"><p class="text-xs text-slate-400 uppercase tracking-widest font-bold mb-2">Total Gross Assets</p><h3 class="text-4xl font-bold serif" id="val-total">€ 0</h3></div>
-                            <div class="glass-card p-8 rounded-3xl border-l-4 border-l-amber-500"><p class="text-xs text-slate-400 uppercase tracking-widest font-bold mb-2">Tax Liability</p><h3 class="text-4xl font-bold text-amber-600 serif" id="val-tax">€ 0</h3></div>
+                            <div class="glass-card p-8 rounded-3xl relative overflow-hidden"><p class="text-xs text-slate-400 uppercase font-bold mb-2">Aggregate Value</p><h3 class="text-4xl font-bold serif text-primary" id="val-total">€ 0</h3></div>
+                            <div class="glass-card p-8 rounded-3xl border-l-4 border-l-danger"><p class="text-xs text-slate-400 uppercase font-bold mb-2 text-danger">Tax Reserve</p><h3 class="text-4xl font-bold text-danger serif" id="val-tax">€ 0</h3></div>
                         </div>
-                        <div class="glass-card rounded-3xl overflow-hidden">
-                            <div class="p-6 border-b border-slate-100 bg-slate-50/50 flex justify-between items-center"><h4 class="font-bold text-slate-800 text-sm uppercase tracking-tighter">Managed Assets</h4><span class="text-[9px] bg-emerald-100 text-emerald-700 px-2 py-1 rounded font-bold uppercase">Banking API Active</span></div>
-                            <div class="divide-y divide-slate-100 text-primary font-medium" id="asset-list"></div>
-                        </div>
-                        <div class="glass-card p-10 rounded-[40px] space-y-8 relative overflow-hidden">
-                            <div class="flex justify-between items-start relative z-10">
-                                <div><h4 class="serif text-2xl font-bold">Heir Relationship Map</h4><p class="text-slate-500 text-sm font-medium">Tracking transfers vs. Italian €1M threshold.</p></div>
-                                <button onclick="openRegisterHeirModal()" class="bg-slate-900 text-white px-5 py-2.5 rounded-xl text-xs font-bold shadow-lg text-white font-bold">+ Register Beneficiary</button>
+
+                        <!-- KPI: AI Strategy Advisor -->
+                        <div class="glass-card p-8 rounded-[40px] bg-slate-900 text-white relative overflow-hidden">
+                            <div class="relative z-10 space-y-6 text-white">
+                                <div class="flex justify-between items-center"><h4 class="serif text-xl font-bold flex items-center gap-3"><i class="fa-solid fa-microchip text-accent"></i> AI Strategy Advisor</h4><span class="text-[10px] bg-accent/20 text-accent px-2 py-1 rounded font-bold uppercase">Learning Mode</span></div>
+                                <div id="ai-insight-box" class="p-6 bg-white/5 border border-white/10 rounded-3xl flex justify-between items-center gap-6">
+                                    <div><p class="text-accent text-[10px] font-bold uppercase mb-1">DTA Alert: Germany Handshake</p><p class="text-sm font-medium leading-relaxed">Cross-border property detected. Action required to mitigate IT+DE double-taxation risk (< 2% target).</p></div>
+                                    <div class="flex flex-col gap-2 min-w-[120px]"><button onclick="acceptAIRecommendation()" class="bg-accent text-slate-900 py-2 rounded-xl text-[10px] font-bold uppercase tracking-widest hover:brightness-110">Remediate</button><button onclick="dismissAIRecommendation()" class="text-slate-500 py-2 text-[10px] font-bold uppercase hover:text-white">Ignore</button></div>
+                                </div>
                             </div>
+                        </div>
+
+                        <div class="glass-card rounded-3xl overflow-hidden">
+                            <div class="p-6 border-b border-slate-100 bg-slate-50/50 flex justify-between items-center text-primary"><h4 class="font-bold text-slate-800 text-sm uppercase font-bold">Verified Inventory</h4><span class="text-[9px] bg-emerald-100 text-emerald-700 px-2 py-1 rounded font-bold uppercase">Handshaking</span></div>
+                            <div class="divide-y divide-slate-100 font-medium text-primary" id="asset-list"></div>
+                        </div>
+
+                        <div class="glass-card p-10 rounded-[40px] space-y-8 relative overflow-hidden">
+                            <h4 class="serif text-2xl font-bold text-primary">Heir Relationship Map</h4>
                             <div class="relative bg-slate-50/50 rounded-[32px] p-8 border border-slate-100 min-h-[300px] flex flex-col items-center">
-                                <div class="relative z-10 mb-16 text-center text-primary"><div class="w-20 h-20 rounded-2xl bg-slate-900 flex flex-col items-center justify-center text-white border-4 border-white shadow-xl"><i class="fa-solid fa-crown text-accent text-sm mb-1"></i><span class="text-[10px] font-bold uppercase tracking-widest text-white">Founder</span></div><div class="tree-node-line w-0.5 h-16 left-1/2 -translate-x-1/2 top-full text-primary"></div></div>
-                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full relative z-10 text-primary" id="heir-tree-grid"></div>
+                                <div class="relative z-10 mb-16 text-center text-primary"><div class="w-20 h-20 rounded-2xl bg-slate-900 flex flex-col items-center justify-center text-white border-4 border-white shadow-xl"><i class="fa-solid fa-crown text-accent text-sm mb-1 text-white"></i><span class="text-[10px] font-bold uppercase tracking-widest text-white">Founder</span></div><div class="tree-node-line w-0.5 h-16 left-1/2 -translate-x-1/2 top-full text-white"></div></div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full relative z-10" id="heir-tree-grid"></div>
                             </div>
                         </div>
                     </div>
 
                     <div class="xl:col-span-4 space-y-8 text-primary">
-                        <div class="glass-card p-8 rounded-3xl text-center">
-                            <h4 class="font-bold text-slate-800 mb-6 text-left uppercase text-xs tracking-widest">Tax Heatmap</h4>
-                            <div class="relative w-full aspect-square max-w-[200px] mx-auto text-primary">
+                        <div class="glass-card p-8 rounded-[40px] relative overflow-hidden">
+                            <h4 class="font-bold text-slate-800 mb-6 uppercase text-xs tracking-widest font-bold">Tax Heatmap</h4>
+                            <div class="relative w-full aspect-square max-w-[200px] mx-auto">
                                 <canvas id="taxChart"></canvas>
                                 <div class="absolute inset-0 flex items-center justify-center pointer-events-none mt-4 text-center">
-                                    <div><p class="text-[10px] text-slate-400 uppercase font-bold tracking-widest">Effective Rate</p><p class="text-3xl font-bold serif text-primary" id="val-effective-rate">0.00%</p></div>
+                                    <div><p class="text-[10px] text-slate-400 uppercase font-bold tracking-widest">Aggregate Tax</p><p class="text-2xl font-bold serif text-primary" id="heatmap-total">€ 0</p></div>
                                 </div>
+                            </div>
+                            <div class="space-y-4 pt-4 border-t border-slate-100">
+                                <div><div class="flex justify-between items-center mb-1 text-[10px] font-bold uppercase"><span>Italy</span><span id="it-exposure-perc">0%</span></div><div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-danger" id="it-exposure-bar" style="width: 0%"></div></div></div>
+                                <div><div class="flex justify-between items-center mb-1 text-[10px] font-bold uppercase"><span>Germany</span><span id="de-exposure-perc">0%</span></div><div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-warning" id="de-exposure-bar" style="width: 0%"></div></div></div>
                             </div>
                         </div>
                         <div class="glass-card p-8 rounded-3xl border-l-4 border-l-accent bg-gradient-to-br from-white to-slate-50 text-primary">
-                            <h4 class="font-bold text-slate-800 mb-6 text-left uppercase text-xs tracking-widest font-bold">Gifting Simulator</h4>
-                            <div id="gifting-tracker-list" class="space-y-6 text-left"></div>
-                            <button onclick="openSimulationModal()" class="w-full mt-8 py-3 bg-accent text-white rounded-xl text-sm font-bold shadow-lg hover:opacity-90 uppercase tracking-widest text-white font-bold">Run Optimizer</button>
+                            <h4 class="font-bold text-slate-800 mb-6 uppercase text-xs tracking-widest">Gifting Simulator</h4>
+                            <div id="gifting-tracker-list" class="space-y-6 text-left font-medium"></div>
+                            <button onclick="openSimulationModal()" class="w-full mt-8 py-3 bg-accent text-white rounded-xl text-sm font-bold shadow-lg hover:opacity-90 uppercase tracking-widest">Optimize Node</button>
                         </div>
                     </div>
                 </div>
@@ -362,95 +314,201 @@
 
             <div id="view-succession" class="portal-content hidden"></div>
             <div id="view-heir" class="portal-content hidden"></div>
+            <div id="view-integrity" class="portal-content hidden"></div>
             <div id="view-profile" class="portal-content hidden"></div>
         </main>
     </div>
 
     <!-- MODALS -->
-    <div id="modal-system-msg" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[300] flex items-center justify-center hidden p-4 text-primary">
-        <div class="bg-white rounded-[40px] p-10 max-w-md w-full shadow-2xl text-center space-y-6 text-primary">
+    <div id="modal-system-msg" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[300] flex items-center justify-center hidden p-4 text-center">
+        <div class="bg-white rounded-[40px] p-10 max-w-md w-full shadow-2xl space-y-6 text-primary">
             <div class="w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center mx-auto text-primary"><i id="system-msg-icon" class="fa-solid fa-envelope-circle-check text-2xl text-primary"></i></div>
-            <h3 class="serif text-2xl font-bold" id="system-msg-title">Institutional Update</h3>
-            <p class="text-sm text-slate-500 font-medium" id="system-msg-text"></p>
-            <button onclick="closeModal('modal-system-msg')" class="w-full bg-primary text-white py-4 rounded-2xl font-bold text-sm shadow-lg uppercase tracking-widest font-bold">Dismiss</button>
+            <h3 class="serif text-2xl font-bold text-primary" id="system-msg-title">Institutional Update</h3>
+            <p class="text-sm text-slate-500 font-medium leading-relaxed" id="system-msg-text"></p>
+            <button onclick="closeModal('modal-system-msg')" class="w-full bg-primary text-white py-4 rounded-2xl font-bold text-sm shadow-lg uppercase tracking-widest text-white">Dismiss</button>
+        </div>
+    </div>
+
+    <div id="modal-discovery" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[200] flex items-center justify-center hidden p-4">
+        <div class="bg-white rounded-[40px] p-10 max-w-2xl w-full shadow-2xl relative text-center text-primary">
+            <button onclick="closeModal('modal-discovery')" class="absolute top-8 right-8 text-slate-400 hover:text-slate-900"><i class="fa-solid fa-xmark text-xl text-primary"></i></button>
+            <h3 class="serif text-3xl mb-10 font-bold text-primary">Portfolio Expansion</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <button onclick="openSyncModal()" class="text-left p-8 border-2 rounded-[32px] hover:border-accent bg-white"><i class="fa-solid fa-bolt-lightning text-emerald-600 text-3xl mb-4 block"></i><h4 class="font-bold text-primary">Bank Sync</h4><p class="text-xs text-slate-500 font-medium">Regulated API handshake</p></button>
+                <button onclick="openAddAssetModal()" class="text-left p-8 border-2 rounded-[32px] hover:border-accent bg-white"><i class="fa-solid fa-file-signature text-amber-600 text-3xl mb-4 block"></i><h4 class="font-bold text-primary">Manual Entry</h4><p class="text-xs text-slate-500 font-medium">Asset declaration</p></button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-simulation" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[200] flex items-center justify-center hidden p-4 text-primary">
+        <div class="bg-white rounded-[40px] p-10 max-w-lg w-full shadow-2xl relative text-primary">
+            <h3 class="serif text-2xl mb-2 font-bold text-primary">Simulator</h3>
+            <div class="space-y-6 text-left mt-8 text-primary">
+                <div><label class="text-[10px] font-bold uppercase text-slate-400 mb-1 block">Heir</label><select id="sim-heir-select" class="w-full px-5 py-3 border rounded-xl outline-none font-medium text-primary"></select></div>
+                <div><label class="text-[10px] font-bold uppercase text-slate-400 mb-1 block text-primary">Asset</label><select id="sim-asset-select" class="w-full px-5 py-3 border rounded-xl outline-none font-medium text-primary"></select></div>
+                <div><label class="text-[10px] font-bold uppercase text-slate-400 mb-1 block">Value (EUR)</label><input id="sim-gift-amount" type="number" class="w-full px-5 py-3 border rounded-xl font-bold text-primary"></div>
+            </div>
+            <div class="flex gap-4 mt-10">
+                <button onclick="closeModal('modal-simulation')" class="flex-1 font-bold text-slate-400 text-xs uppercase">CANCEL</button>
+                <button onclick="executeSimulation()" class="flex-1 bg-accent text-white rounded-2xl font-bold py-4 shadow-lg uppercase text-xs">Execute</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-register-heir" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[200] flex items-center justify-center hidden p-4">
+        <div class="bg-white rounded-[40px] p-10 max-w-lg w-full shadow-2xl relative text-primary">
+            <h3 class="serif text-2xl mb-6 font-bold text-primary text-primary text-primary text-primary">Register Heir</h3>
+            <div class="space-y-4">
+                <input id="heir-input-name" type="text" placeholder="Full Name" class="w-full px-5 py-3 border rounded-xl font-medium text-primary">
+                <select id="heir-input-relation" class="w-full px-5 py-3 border rounded-xl font-medium text-primary">
+                    <option value="Spouse">Spouse</option><option value="Child">Child</option><option value="Parent">Parent</option><option value="Sibling">Sibling</option>
+                </select>
+            </div>
+            <div class="flex gap-4 mt-10"><button onclick="closeModal('modal-register-heir')" class="flex-1 font-bold text-slate-400 uppercase text-xs">CANCEL</button><button onclick="saveHeir()" class="flex-1 bg-primary text-white rounded-2xl font-bold py-4 shadow-lg uppercase text-xs text-white">Save</button></div>
         </div>
     </div>
 
     <script>
         // --- CORE STATE ---
         let state = {
-            authMode: 'signup',
+            onboardingPerc: 70,
             isTrialMode: false,
             profile: { name: 'Marco Rossi', email: 'm.rossi@privatewealth.it' },
-            vault: [{ id: 1, name: "Carta d'Identità", status: 'VERIFIED', icon: 'fa-id-card', color: 'blue', desc: 'Expires 2030' }],
             assets: [
-                { id: 1, name: 'Intesa Wealth Node', type: 'Liquid Funds', value: 1200000, color: 'emerald', icon: 'fa-building-columns', verified: true },
-                { id: 2, name: 'UniCredit Portfolio', type: 'Investments', value: 450000, color: 'blue', icon: 'fa-chart-pie', verified: true },
-                { id: 3, name: 'Navigli Residence', type: 'Real Estate', value: 800000, color: 'amber', icon: 'fa-house', verified: true }
+                { id: 1, name: 'Intesa Wealth Node', type: 'Liquid Funds', value: 1200000, color: 'emerald', icon: 'fa-building-columns', verified: true, jurisdiction: 'Italy' },
+                { id: 2, name: 'UniCredit Portfolio', type: 'Investments', value: 450000, color: 'blue', icon: 'fa-chart-pie', verified: true, jurisdiction: 'Italy' },
+                { id: 3, name: 'Berlin Real Estate', type: 'Real Estate', value: 800000, color: 'amber', icon: 'fa-house', verified: true, jurisdiction: 'Germany' }
             ],
             heirs: [
-                { id: 1, name: 'Alessandro Rossi', verified: true, relation: 'Child', gifted: 150000 },
-                { id: 2, name: 'Elena Rossi', verified: true, relation: 'Child', gifted: 0 }
+                { id: 1, name: 'Alessandro Rossi', relation: 'Child', gifted: 150000 },
+                { id: 2, name: 'Elena Rossi', relation: 'Child', gifted: 0 }
             ],
-            succession: { cert: false, notary: false }, trash: null
+            succession: { cert: false, notary: false }
         };
 
-        const EXEMPTION_LIMIT = 1000000;
-        let taxChartInstance = null; 
-        let toastT = null;
+        const TAX_RULES = {
+            'Spouse': { allowance: 1000000, rate: 0.04 },
+            'Child': { allowance: 1000000, rate: 0.04 },
+            'Parent': { allowance: 1000000, rate: 0.04 },
+            'Sibling': { allowance: 100000, rate: 0.06 },
+            'Relative': { allowance: 0, rate: 0.06 },
+            'Other': { allowance: 0, rate: 0.08 }
+        };
+
+        let taxChartInstance = null;
 
         window.onload = () => { refreshUI(); runPublicCalculator(); };
 
-        // --- PUBLIC TAX CALCULATOR LOGIC ---
-        function runPublicCalculator() {
-            const estate = parseFloat(document.getElementById('calc-estate-value').value) || 0;
-            const heirs = parseInt(document.getElementById('calc-heir-count').value) || 0;
-            
-            const totalExemption = heirs * EXEMPTION_LIMIT;
-            const taxableAmount = Math.max(0, estate - totalExemption);
-            const estimatedTax = taxableAmount * 0.04;
-            const effectiveRate = estate > 0 ? (estimatedTax / estate) * 100 : 0;
-
-            document.getElementById('calc-exemption-val').innerText = `€ ${totalExemption.toLocaleString()}`;
-            document.getElementById('calc-tax-val').innerText = `€ ${estimatedTax.toLocaleString()}`;
-            document.getElementById('calc-rate-val').innerText = `${effectiveRate.toFixed(2)}%`;
-        }
-
-        // --- TRIAL LOGIC ---
-        function startTrialWorkflow() {
-            state.isTrialMode = true;
-            switchView('auth');
-            showSystemMsg("Trial Initialized", "Your 14-day Premium Trial has been added to your provisioning queue. Complete the secure initialization to access your node.", "fa-clock");
-        }
-
-        function finalizeAuth() {
-            if(state.isTrialMode) {
-                document.getElementById('trial-badge').classList.remove('hidden');
+        // --- CORE UI CONTROLLER ---
+        function refreshUI() {
+            // Sidebar Progress
+            const ob = document.getElementById('onboarding-perc');
+            const obBar = document.getElementById('onboarding-bar');
+            if(ob && obBar) {
+                ob.innerText = state.onboardingPerc + '%';
+                obBar.style.width = state.onboardingPerc + '%';
             }
-            switchView('founder');
+
+            renderAssets();
+            renderHeirs();
+            updateCalculations();
+            renderHeirTree();
+            syncProfileDisplay();
+            updateSuccessionUI();
         }
 
-        // --- UI UTILS ---
-        function closeModal(id) { document.getElementById(id).classList.add('hidden'); }
-        function showSystemMsg(title, text, icon) {
-            document.getElementById('system-msg-title').innerText = title;
-            document.getElementById('system-msg-text').innerText = text;
-            document.getElementById('system-msg-icon').className = `fa-solid ${icon} text-2xl text-primary`;
-            document.getElementById('modal-system-msg').classList.remove('hidden');
+        function updateCalculations() {
+            const total = state.assets.reduce((s, a) => s + a.value, 0);
+            const share = total / (state.heirs.length || 1);
+            let totalTax = 0;
+
+            state.heirs.forEach(h => {
+                const rule = TAX_RULES[h.relation] || TAX_RULES['Other'];
+                const taxable = Math.max(0, share - Math.max(0, rule.allowance - h.gifted));
+                totalTax += taxable * rule.rate;
+            });
+
+            // Element checks prevent "Cannot set properties of null"
+            const elTotal = document.getElementById('val-total'); if(elTotal) elTotal.innerText = `€ ${total.toLocaleString()}`;
+            const elTax = document.getElementById('val-tax'); if(elTax) elTax.innerText = `€ ${Math.round(totalTax).toLocaleString()}`;
+            const elHeat = document.getElementById('heatmap-total'); if(elHeat) elHeat.innerText = `€ ${Math.round(totalTax).toLocaleString()}`;
+            const elRate = document.getElementById('val-effective-rate'); if(elRate) elRate.innerText = `${total>0 ? ((totalTax/total)*100).toFixed(2) : 0}%`;
+
+            const itAssetsVal = state.assets.filter(a => a.jurisdiction === 'Italy').reduce((s, a) => s + a.value, 0);
+            const deAssetsVal = state.assets.filter(a => a.jurisdiction === 'Germany').reduce((s, a) => s + a.value, 0);
+            const itTax = (totalTax * (itAssetsVal / total)) || 0;
+            const deTax = (totalTax * (deAssetsVal / total)) || 0;
+
+            const elItPerc = document.getElementById('it-exposure-perc');
+            const elItBar = document.getElementById('it-exposure-bar');
+            if(elItPerc && elItBar) {
+                const perc = Math.round((itTax/totalTax)*100) || 0;
+                elItPerc.innerText = perc + '%';
+                elItBar.style.width = perc + '%';
+            }
+
+            const elDePerc = document.getElementById('de-exposure-perc');
+            const elDeBar = document.getElementById('de-exposure-bar');
+            if(elDePerc && elDeBar) {
+                const perc = Math.round((deTax/totalTax)*100) || 0;
+                elDePerc.innerText = perc + '%';
+                elDeBar.style.width = perc + '%';
+            }
+
+            initChart(itTax, deTax);
         }
 
+        function initChart(it, de) {
+            const canvas = document.getElementById('taxChart');
+            if(!canvas) return;
+            const ctx = canvas.getContext('2d');
+            if(taxChartInstance) taxChartInstance.destroy();
+            taxChartInstance = new Chart(ctx, { type: 'doughnut', data: { labels: ['Italy', 'Germany'], datasets: [{ data: [it, de], backgroundColor: ['#ef4444', '#f59e0b'], borderWidth: 0, cutout: '85%' }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } } });
+        }
+
+        // --- RENDER HELPERS ---
+        function renderAssets() {
+            const list = document.getElementById('asset-list');
+            if(!list) return;
+            list.innerHTML = state.assets.map(a => `
+                <div class="asset-row p-6 flex items-center justify-between hover:bg-slate-50 transition-all text-primary cursor-pointer">
+                    <div class="flex items-center gap-4 text-primary">
+                        <div class="w-12 h-12 rounded-2xl bg-slate-50 flex items-center justify-center text-primary font-bold"><i class="fa-solid ${a.icon || 'fa-box-open'}"></i></div>
+                        <div><p class="text-sm font-bold text-slate-800 text-primary">${a.name}</p><p class="text-[9px] text-slate-400 uppercase font-bold text-primary">${a.jurisdiction}</p></div>
+                    </div>
+                    <p class="text-sm font-bold text-primary text-primary">€ ${a.value.toLocaleString()}</p>
+                </div>`).join('');
+        }
+
+        function renderHeirs() {
+            const t = document.getElementById('gifting-tracker-list');
+            if(!t) return;
+            t.innerHTML = state.heirs.filter(h => TAX_RULES[h.relation].allowance > 0).map(h => `
+                <div class="space-y-2 text-primary text-primary">
+                    <div class="flex justify-between text-[10px] font-bold text-slate-400 uppercase"><span>${h.name}</span><span class="text-slate-700 font-bold">€${h.gifted.toLocaleString()} / €1.0M</span></div>
+                    <div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden text-primary"><div class="h-full bg-accent transition-all duration-1000" style="width: ${(h.gifted/1000000)*100}%"></div></div>
+                </div>`).join('');
+        }
+
+        function renderHeirTree() {
+            const grid = document.getElementById('heir-tree-grid'); if(!grid) return;
+            grid.innerHTML = state.heirs.map(h => {
+                const rule = TAX_RULES[h.relation] || TAX_RULES['Other'];
+                const usePerc = rule.allowance > 0 ? (h.gifted / rule.allowance) * 100 : 0;
+                return `<div class="glass-card p-6 rounded-[28px] border-slate-200 text-primary text-center space-y-4"><div class="w-12 h-12 rounded-xl bg-slate-50 flex items-center justify-center text-slate-400 mx-auto group-hover:text-accent font-bold"><i class="fa-solid fa-user-tag text-primary"></i></div><div><h5 class="font-bold text-sm text-primary font-bold">${h.name}</h5><p class="text-[9px] uppercase font-bold text-slate-400 tracking-widest text-primary">${h.relation}</p></div><div class="w-full h-1 bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-accent" style="width: ${usePerc}%"></div></div><div class="mt-2 p-2 bg-slate-900 text-white rounded-xl text-[10px] font-bold text-accent uppercase font-bold">POOL: €${(rule.allowance - h.gifted).toLocaleString()}</div><p class="text-[9px] text-slate-400 font-bold uppercase text-primary">RATE: ${(rule.rate*100)}%</p></div>`;
+            }).join('');
+        }
+
+        function syncProfileDisplay() { document.querySelectorAll('.profile-name-display').forEach(el => el.innerText = state.profile.name); }
+
+        // --- NAVIGATION ---
         function switchView(v) {
-            const views = {
-                'landing': document.getElementById('view-landing'),
-                'auth': document.getElementById('view-auth'),
-                'workspace': document.getElementById('private-workspace')
-            };
-            const isWorkspace = !['landing', 'auth'].includes(v);
-            views.landing.classList.toggle('hidden', v !== 'landing');
-            views.auth.classList.toggle('hidden', v !== 'auth');
-            views.workspace.classList.toggle('hidden', !isWorkspace);
-            
-            if(isWorkspace) {
+            const views = {'landing': document.getElementById('view-landing'), 'auth': document.getElementById('view-auth'), 'workspace': document.getElementById('private-workspace')};
+            const isL = (v === 'landing'); const isA = (v === 'auth'); const isW = (!isL && !isA);
+            views.landing.classList.toggle('hidden', !isL);
+            views.auth.classList.toggle('hidden', !isA);
+            views.workspace.classList.toggle('hidden', !isW);
+            if(isW) {
                 document.querySelectorAll('.portal-content').forEach(el => el.classList.add('hidden'));
                 const t = document.getElementById(`view-${v}`); 
                 if(t) {
@@ -464,97 +522,58 @@
             window.scrollTo(0,0);
         }
 
-        function handlePremiumClick() {
-            showSystemMsg("Premium Provisioning", "Premium Node upgrades are performed via a curated white-glove process. An onboarding specialist will contact your registered email.", "fa-envelope-circle-check");
+        // --- SUCCESSION ---
+        function verifySuccessionKey(k) {
+            const b = document.getElementById(k === 'cert' ? 'btn-cert' : 'btn-notary');
+            if(!b) return;
+            b.innerHTML = '<i class="fa-solid fa-spinner fa-spin text-white"></i>';
+            setTimeout(() => { if(k === 'cert') state.succession.cert = true; else state.succession.notary = true; refreshUI(); }, 1000);
         }
 
-        // --- CORE UI LOGIC ---
-        function refreshUI() {
-            renderAssets(); renderHeirs(); updateCalculations(); renderHeirTree(); syncProfileDisplay(); renderVault(); updateSuccessionUI();
-        }
-
-        function updateCalculations() {
-            const verifiedAssets = state.assets.filter(a => a.verified);
-            const total = verifiedAssets.reduce((s, a) => s + a.value, 0);
-            const directHeirs = state.heirs.filter(h => h.verified && (h.relation === 'Child' || h.relation === 'Spouse'));
-            const totalGifts = directHeirs.reduce((s, h) => s + h.gifted, 0);
-            const remainingExempt = Math.max(0, (directHeirs.length * EXEMPTION_LIMIT) - totalGifts);
-            const tax = Math.max(0, total - remainingExempt) * 0.04;
-            document.getElementById('val-total').innerText = `€ ${total.toLocaleString()}`;
-            document.getElementById('val-tax').innerText = `€ ${tax.toLocaleString()}`;
-            document.getElementById('val-effective-rate').innerText = `${total>0 ? ((tax/total)*100).toFixed(2) : 0}%`;
-            initChart(total - tax, tax);
-        }
-
-        function initChart(n, t) {
-            const canvas = document.getElementById('taxChart');
-            if(!canvas) return;
-            const ctx = canvas.getContext('2d');
-            if(taxChartInstance) taxChartInstance.destroy();
-            taxChartInstance = new Chart(ctx, { type: 'doughnut', data: { labels: ['Net', 'Tax'], datasets: [{ data: [n, t], backgroundColor: ['#b5935b', '#ef4444'], borderWidth: 0, cutout: '85%', borderRadius: 20 }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } } });
-        }
-
-        function renderHeirs() {
-            const tracker = document.getElementById('gifting-tracker-list');
-            if(tracker) tracker.innerHTML = state.heirs.filter(h=>h.verified && (h.relation==='Child'||h.relation==='Spouse')).map(h => `<div class="space-y-2 text-primary"><div class="flex justify-between text-[10px] font-bold text-slate-400 uppercase"><span>${h.name}</span><span class="text-slate-700">€${h.gifted.toLocaleString()} / €1.0M</span></div><div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-accent transition-all duration-1000" style="width: ${(h.gifted/1000000)*100}%"></div></div></div>`).join('');
-        }
-
-        function renderHeirTree() {
-            const grid = document.getElementById('heir-tree-grid'); if(!grid) return;
-            grid.innerHTML = state.heirs.map(h => {
-                const isEligible = (h.relation === 'Child' || h.relation === 'Spouse');
-                return `<div class="glass-card p-6 rounded-[28px] border-slate-200 text-primary text-center space-y-4 font-medium"><div class="w-12 h-12 rounded-xl bg-slate-50 flex items-center justify-center text-slate-400 mx-auto group-hover:text-accent transition-colors"><i class="fa-solid fa-user-tag"></i></div><div><h5 class="font-bold text-sm text-primary font-bold">${h.name}</h5><p class="text-[9px] uppercase font-bold text-slate-400 tracking-widest tracking-tighter">${h.relation}</p></div><div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-accent" style="width: ${isEligible ? (h.gifted/1000000)*100 : 0}%"></div></div><div class="mt-2 p-2 bg-slate-900 text-white rounded-xl text-xs font-bold text-accent uppercase">€ ${(isEligible ? 1000000 - h.gifted : 0).toLocaleString()} Pool</div></div>`;
-            }).join('');
-        }
-
-        function renderAssets() {
-            const list = document.getElementById('asset-list'); if(!list) return;
-            list.innerHTML = state.assets.map(a => `<div class="asset-row p-6 flex items-center justify-between hover:bg-slate-50 transition-all text-primary cursor-pointer"><div class="flex items-center gap-4 text-primary font-bold"><div class="w-12 h-12 rounded-2xl bg-${a.verified?a.color:'slate'}-50 text-${a.verified?a.color:'slate'}-600 flex items-center justify-center text-primary"><i class="fa-solid ${a.icon || 'fa-box-open'}"></i></div><div><p class="text-sm font-bold text-slate-800 text-primary font-bold">${a.name}</p></div></div><div class="flex items-center gap-6 text-primary font-bold font-mono text-xs"><p>€ ${a.value.toLocaleString()}</p><button onclick="event.stopPropagation(); removeAsset(${a.id})" class="delete-btn text-slate-300 hover:text-red-500 transition-colors"><i class="fa-solid fa-trash-can text-sm"></i></button></div></div>`).join('');
-        }
-
-        function renderVault() {
-            const v = document.getElementById('document-vault-list'); if(v) v.innerHTML = state.vault.map(d => `<div class="p-6 flex items-center justify-between hover:bg-slate-50 text-primary font-medium text-primary"><div class="flex items-center gap-4 text-primary"><div class="w-10 h-10 rounded-lg bg-${d.color}-50 text-${d.color}-600 flex items-center justify-center text-primary"><i class="fa-solid ${d.icon}"></i></div><div><p class="text-sm font-bold text-primary font-bold text-primary">${d.name}</p></div></div><span class="px-2 py-1 bg-emerald-50 text-emerald-700 text-[9px] font-bold rounded uppercase">${d.status}</span></div>`).join('');
-        }
-
-        function toggleAuthMode() {
-            const title = document.getElementById('auth-title');
-            const toggleBtn = document.getElementById('auth-toggle-btn');
-            if (state.authMode === 'signup') {
-                state.authMode = 'login'; title.innerText = "Access Node"; toggleBtn.innerText = "Switch to Initialize";
-            } else {
-                state.authMode = 'signup'; title.innerText = "Initialize Node"; toggleBtn.innerText = "Switch to Login";
+        function updateSuccessionUI() {
+            const bc = document.getElementById('btn-cert'); if(!bc) return;
+            if(state.succession.cert) {
+                bc.innerText = "Verified ✔"; bc.className = "w-full bg-emerald-600 text-white py-4 rounded-2xl font-bold text-sm shadow-lg uppercase text-white font-bold";
+                const kn = document.getElementById('key-card-notary'); if(kn) kn.classList.remove('opacity-40', 'grayscale', 'pointer-events-none');
+                const bn = document.getElementById('btn-notary'); if(bn) { bn.className = "w-full bg-primary text-white py-4 rounded-2xl font-bold uppercase shadow-lg text-white"; bn.innerText = "Authorize Key"; bn.onclick = () => verifySuccessionKey('notary'); }
+            }
+            if(state.succession.notary) {
+                const bn = document.getElementById('btn-notary'); if(bn) { bn.innerText = "Authorized ✔"; bn.className = "w-full bg-emerald-600 text-white py-4 rounded-2xl font-bold text-sm shadow-lg uppercase text-white font-bold"; }
+                const ec = document.getElementById('execution-container'); if(ec) ec.classList.remove('opacity-40');
+                const be = document.getElementById('btn-execute'); if(be) { be.disabled = false; be.className = "bg-accent text-white px-12 py-5 rounded-2xl font-bold text-lg shadow-xl hover:brightness-110 uppercase text-white"; be.onclick = () => executeFinalDisbursement(); }
+                const lst = document.getElementById('lock-status-text'); if(lst) lst.innerText = "ORCHESTRATOR UNLOCKED";
             }
         }
 
-        function syncProfileDisplay() { document.querySelectorAll('.profile-name-display').forEach(el => el.innerText = state.profile.name); const initials = state.profile.name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2); document.querySelectorAll('.initials-avatar, .initials-avatar-large').forEach(el => el.innerText = initials); }
-        function saveProfileSettings() { const n = document.getElementById('profile-name-input'); const e = document.getElementById('profile-email-input'); if(n) state.profile.name = n.value; if(e) state.profile.email = e.value; refreshUI(); showSystemMsg("Node Sync", "Records updated.", "fa-user-check"); }
-        function verifySuccessionKey(k) { const b = document.getElementById(`btn-${k}`); b.innerHTML = '<i class="fa-solid fa-spinner fa-spin text-white"></i>'; setTimeout(() => { if(k==='cert') state.succession.cert=true; else state.succession.notary=true; refreshUI(); }, 1000); }
-        function updateSuccessionUI() { const bc = document.getElementById('btn-cert'); if(!bc) return; if(state.succession.cert) { bc.innerText = "Verified ✔"; bc.className = "w-full bg-emerald-600 text-white py-4 rounded-2xl font-bold text-sm shadow-lg uppercase text-white"; document.getElementById('key-card-notary'); const bn = document.getElementById('btn-notary'); if(bn) { bn.className = "w-full bg-primary text-white py-4 rounded-2xl font-bold text-sm"; bn.innerText = "Authorize"; } } if(state.succession.notary) { const bn = document.getElementById('btn-notary'); if(bn) { bn.innerText = "Authorized ✔"; bn.className = "w-full bg-emerald-600 text-white py-4 rounded-2xl font-bold text-sm shadow-lg uppercase text-white text-white text-white text-white"; } document.getElementById('execution-container'); const be = document.getElementById('btn-execute'); if(be) { be.disabled = false; be.className = "bg-accent text-white px-12 py-5 rounded-2xl font-bold text-lg shadow-xl hover:opacity-90 transition-all text-white text-white text-white text-white"; } document.getElementById('lock-status-text').innerText = "UNLOCKED"; } }
-        function removeAsset(id) { const idx = state.assets.findIndex(a => a.id === id); state.trash = { asset: state.assets[idx], index: idx }; state.assets.splice(idx, 1); refreshUI(); showUndoToast(); }
-        function undoDelete() { if (state.trash) { state.assets.splice(state.trash.index, 0, state.trash.asset); state.trash = null; refreshUI(); hideUndoToast(); } }
-        function showUndoToast() { const t = document.getElementById('undo-toast'); if(toastT) clearTimeout(toastT); t.classList.remove('hidden', 'pointer-events-none', 'opacity-0'); t.classList.add('opacity-100', 'translate-y-0 text-white'); toastT = setTimeout(hideUndoToast, 5000); }
-        function hideUndoToast() { const t = document.getElementById('undo-toast'); t.classList.add('opacity-0', 'translate-y-20', 'pointer-events-none'); setTimeout(() => t.classList.add('hidden'), 300); }
-        function saveDocument() { const n = document.getElementById('new-doc-name'); if(!n || !n.value) return; state.vault.push({ id: Date.now(), name: n.value, status: 'PENDING', icon: 'fa-file-shield', color: 'slate' }); n.value = ''; closeModal('modal-upload-doc'); renderVault(); showSystemMsg("Transmission", `Metadata sent to node.`, "fa-cloud-arrow-up"); }
-        function openDiscoveryModal() { document.getElementById('modal-discovery').classList.remove('hidden'); }
-        function openRegisterHeirModal() { document.getElementById('modal-register-heir').classList.remove('hidden'); }
-        function openSimulationModal() { const hs = document.getElementById('sim-heir-select'); const as = document.getElementById('sim-asset-select'); if(!hs || !as) return; hs.innerHTML = state.heirs.filter(h=>h.verified).map(h=>`<option value="${h.id}">${h.name}</option>`).join(''); as.innerHTML = state.assets.filter(a=>a.verified).map(a=>`<option value="${a.id}">${a.name} (€${a.value.toLocaleString()})</option>`).join(''); document.getElementById('modal-simulation').classList.remove('hidden'); }
-        function openUploadModal() { document.getElementById('modal-upload-doc').classList.remove('hidden'); }
-        function openAddAssetModal() { closeModal('modal-discovery'); document.getElementById('modal-manual-asset').classList.remove('hidden'); }
-        function openSyncModal() { closeModal('modal-discovery'); document.getElementById('modal-sync').classList.remove('hidden'); }
-        function startSync(bank) { document.getElementById('sync-initial-view').classList.add('hidden'); document.getElementById('sync-progress-view').classList.remove('hidden'); let p = 0; const bar = document.getElementById('sync-bar'); const int = setInterval(() => { p += 10; bar.style.width = p + '%'; if (p >= 100) { clearInterval(int); state.assets.push({ id: Date.now(), name: `${bank} Sync`, value: 300000, verified: true, color: 'blue', icon: 'fa-building-columns' }); refreshUI(); closeModal('modal-sync'); } }, 100); }
-        function saveManualAsset() { const n = document.getElementById('new-asset-name'); const v = document.getElementById('new-asset-value'); if(!n||!v||!v.value) return; state.assets.push({ id: Date.now(), name: n.value, value: parseFloat(v.value), verified: false, color: 'amber', icon: 'fa-box' }); n.value=''; v.value=''; closeModal('modal-manual-asset'); refreshUI(); }
-        function saveHeir() { const n = document.getElementById('heir-input-name'); const r = document.getElementById('heir-input-relation'); if(!n||!n.value) return; state.heirs.push({ id: Date.now(), name: n.value, relation: r.value, verified: false, gifted: 0 }); n.value=''; closeModal('modal-register-heir'); refreshUI(); }
-        function executeFinalDisbursement() { const b = document.getElementById('btn-execute'); b.innerHTML = '<i class="fa-solid fa-spinner fa-spin text-white text-white"></i> TRANSMITTING...'; b.disabled = true; setTimeout(() => { switchView('heir'); startHeirSequence(); }, 1500); }
-        function startHeirSequence() {
-            const feed = document.getElementById('heir-instruction-feed'); if(!feed) return; const log = (m, c="slate-300") => { const d = document.createElement('div'); d.className = `text-${c}`; d.innerText = `[${new Date().toLocaleTimeString()}] ${m}`; feed.appendChild(d); feed.scrollTop = feed.scrollHeight; };
-            setTimeout(() => { const s2c = document.getElementById('heir-step-2-circle'); if(s2c) s2c.classList.add('completed'); const s2s = document.getElementById('heir-step-2-status'); if(s2s) s2s.innerText = "SETTLED: SHA256...B922"; log(`SUCCESS: Tax confirmed. ID: 09F1`, "accent");
-            setTimeout(() => { const s3c = document.getElementById('heir-step-3-circle'); if(s3c) s3c.classList.add('completed'); const s3s = document.getElementById('heir-step-3-status'); if(s3s) s3s.innerText = "ESTATE CLOSED"; log("SUCCESS: Estate fully orchestrated.", "emerald-500"); }, 2000); }, 1000);
+        function executeFinalDisbursement() { const b = document.getElementById('btn-execute'); b.innerHTML = '<i class="fa-solid fa-spinner fa-spin text-white"></i> TRANSMITTING...'; b.disabled = true; setTimeout(() => { switchView('heir'); }, 1500); }
+
+        // --- MISC ACTIONS ---
+        function runPublicCalculator() {
+            const estate = parseFloat(document.getElementById('calc-estate-value').value) || 0;
+            const type = document.getElementById('calc-heir-type').value;
+            let rule = type === 'direct' ? TAX_RULES['Child'] : type === 'sibling' ? TAX_RULES['Sibling'] : type === 'relative' ? TAX_RULES['Relative'] : TAX_RULES['Other'];
+            const tax = Math.max(0, estate - rule.allowance) * rule.rate;
+            document.getElementById('calc-tax-val').innerText = `€ ${Math.round(tax).toLocaleString()}`;
+            document.getElementById('calc-rate-display').innerText = `${(rule.rate * 100)}%`;
         }
 
+        function finalizeAuth() { switchView('founder'); }
+        function startTrialWorkflow() { state.isTrialMode = true; document.getElementById('trial-badge').classList.remove('hidden'); switchView('auth'); showSystemMsg("Trial Node Active", "Your 14-day Premium Trial node has been initialised.", "fa-clock"); }
+        function acceptAIRecommendation() { state.onboardingPerc = 100; refreshUI(); document.getElementById('ai-insight-box').innerHTML = `<div class="w-full text-center text-[10px] text-slate-500 font-bold uppercase tracking-widest"><i class="fa-solid fa-circle-check text-success mr-2"></i> Remediated Handshake Protocol Active</div>`; }
+        function dismissAIRecommendation() { document.getElementById('ai-insight-box').innerHTML = `<div class="w-full text-center text-[10px] text-slate-500 font-bold uppercase tracking-widest italic">Insight Dismissed</div>`; }
+        function openDiscoveryModal() { document.getElementById('modal-discovery').classList.remove('hidden'); }
+        function openRegisterHeirModal() { document.getElementById('modal-register-heir').classList.remove('hidden'); }
+        function openSimulationModal() { const hs = document.getElementById('sim-heir-select'); const as = document.getElementById('sim-asset-select'); if(!hs || !as) return; hs.innerHTML = state.heirs.map(h=>`<option value="${h.name}">${h.name}</option>`).join(''); as.innerHTML = state.assets.map(a=>`<option value="${a.name}">${a.name} (€${a.value.toLocaleString()})</option>`).join(''); document.getElementById('modal-simulation').classList.remove('hidden'); }
+        function executeSimulation() { showSystemMsg("Results Logged", `Simulated transfer recorded to audit trail.`, "fa-gift"); closeModal('modal-simulation'); }
+        function saveHeir() { const n = document.getElementById('heir-input-name').value; const r = document.getElementById('heir-input-relation').value; if(!n) return; state.heirs.push({ id: Date.now(), name: n, relation: r, verified: true, gifted: 0 }); refreshUI(); closeModal('modal-register-heir'); }
+        function openSyncModal() { closeModal('modal-discovery'); showSystemMsg("API Handshake", "Synchronising with bank nodes...", "fa-bolt-lightning"); }
+        function openAddAssetModal() { closeModal('modal-discovery'); showSystemMsg("Manual Declaration", "Access manual registration module.", "fa-file-signature"); }
+
         function injectModuleTemplate(v, t) {
-            if(v === 'succession') t.innerHTML = `<div class="max-w-4xl mx-auto space-y-10 text-center text-primary"><header class="space-y-3"><div class="inline-flex items-center gap-2 px-3 py-1 bg-red-100 text-red-700 rounded-full text-[10px] font-bold uppercase tracking-widest"><i class="fa-solid fa-radiation animate-pulse"></i> Locked</div><h2 class="serif text-5xl font-bold">Succession Portal</h2></header><div class="glass-card rounded-[40px] overflow-hidden shadow-2xl text-left"><div class="bg-primary p-10 flex justify-between items-center text-white"><div><p class="text-accent text-[10px] uppercase font-bold mb-1 text-accent font-bold">Status</p><h3 class="text-3xl font-bold serif text-white" id="lock-status-text">DISBURSEMENT LOCKED</h3></div><i class="fa-solid fa-lock text-3xl text-slate-500"></i></div><div class="p-10 space-y-12 bg-white text-center text-primary"><div class="grid grid-cols-1 md:grid-cols-2 gap-10 font-bold uppercase tracking-widest text-xs text-primary"><div class="p-8 border-2 border-dashed rounded-[32px] space-y-6"><i class="fa-solid fa-file-invoice text-3xl text-slate-300"></i><h4 class="font-bold">1. Death Certificate</h4><button onclick="verifySuccessionKey('cert')" id="btn-cert" class="w-full bg-primary text-white py-4 rounded-2xl font-bold uppercase shadow-lg">Verify</button></div><div id="key-card-notary" class="p-8 border-2 border-dashed rounded-[32px] space-y-6 opacity-40 grayscale pointer-events-none"><i class="fa-solid fa-signature text-3xl text-slate-300"></i><h4 class="font-bold text-slate-400">2. Notary Signature</h4><button id="btn-notary" class="w-full bg-slate-200 text-slate-400 py-4 rounded-2xl font-bold font-medium">Awaiting</button></div></div><div id="execution-container" class="bg-slate-50 p-8 rounded-[32px] opacity-40 flex flex-col md:flex-row justify-between items-center gap-8 text-left font-medium"><div><h5 class="font-bold">Automated Settlement</h5><p class="text-xs text-slate-500">Dual-key encryption matching...</p></div><button onclick="executeFinalDisbursement()" id="btn-execute" disabled class="bg-slate-400 text-white px-12 py-5 rounded-2xl font-bold text-lg shadow-xl cursor-not-allowed uppercase">Execute</button></div></div></div></div>`;
-            if(v === 'heir') t.innerHTML = `<header class="flex justify-between items-end gap-6 text-primary"><h2 class="serif text-4xl font-bold">Beneficiary Workspace</h2><p class="font-mono text-xs text-slate-400 font-bold">#IT-LEG-882190</p></header><div class="grid grid-cols-1 xl:grid-cols-12 gap-8 text-primary mt-10"><div class="xl:col-span-8 space-y-8"><div class="glass-card p-10 rounded-[40px] text-primary"><h4 class="font-bold text-xl mb-12 uppercase text-xs tracking-widest font-bold">Pipeline Status</h4><div class="relative flex flex-col gap-12"><div class="absolute left-5 top-2 bottom-2 w-0.5 bg-slate-100 -z-0 text-primary"></div><div class="flex items-start gap-6 relative z-10"><div class="w-10 h-10 rounded-full border-2 border-slate-200 bg-white flex items-center justify-center font-bold text-slate-400 stepper-circle completed text-primary">1</div><div><h5 class="font-bold text-sm text-primary">Identity Verified</h5></div></div><div class="flex items-start gap-6 relative z-10 text-primary"><div id="heir-step-2-circle" class="w-10 h-10 rounded-full border-2 border-slate-200 bg-white flex items-center justify-center font-bold text-slate-400 stepper-circle text-primary">2</div><div><h5 class="font-bold text-sm text-primary font-bold">Tax Settlement</h5><p id="heir-step-2-status" class="text-[10px] text-slate-400 font-bold uppercase mt-1">Pending</p></div></div><div class="flex items-start gap-6 relative z-10 text-primary"><div id="heir-step-3-circle" class="w-10 h-10 rounded-full border-2 border-slate-200 bg-white flex items-center justify-center font-bold text-slate-400 stepper-circle text-primary text-primary">3</div><div><h5 class="font-bold text-sm text-primary font-bold text-primary">Final Distribution</h5><p id="heir-step-3-status" class="text-[10px] text-slate-400 font-bold uppercase mt-1">Locked</p></div></div></div></div><div class="glass-card rounded-[32px] overflow-hidden bg-slate-900 text-slate-300 p-6 h-48 overflow-y-auto font-mono text-[10px] space-y-2 text-white" id="heir-instruction-feed"><div class="text-emerald-500 text-white">[SYSTEM] Node handshakes active.</div></div></div><div class="xl:col-span-4 space-y-8"><div id="tax-receipt-card" class="glass-card p-8 rounded-[32px] bg-primary text-white shadow-2xl relative transition-all grayscale opacity-50 text-white text-white"><h4 class="serif text-xl mb-6 font-bold text-white">Tax Receipt</h4><div class="space-y-4 text-[10px]"><div class="flex justify-between border-b border-white/10 pb-2"><span>Payee</span><span class="font-bold text-white">Agenzia Entrate</span></div><div class="flex justify-between border-b border-white/10 pb-2"><span>Amount</span><span class="text-lg font-bold text-accent text-white" id="receipt-tax-val text-white">€ 0.00</span></div></div><div class="p-4 bg-white/5 rounded-2xl mt-8 text-center text-white text-white"><p class="text-[10px] font-mono break-all text-accent text-white" id="receipt-hash">SHA256_AWAITING</p></div></div></div></div>`;
-            if(v === 'profile') t.innerHTML = `<header class="flex justify-between items-start gap-6 text-primary"><h2 class="serif text-4xl font-bold text-primary">Client Profile</h2><span class="px-4 py-2 bg-emerald-100 text-emerald-700 rounded-xl text-xs font-bold uppercase">Identity Secured</span></header><div class="grid grid-cols-1 xl:grid-cols-12 gap-8 text-primary mt-10 text-primary text-primary"><div class="xl:col-span-8 space-y-8"><div class="glass-card p-10 rounded-[40px] space-y-8 text-primary"><div class="flex items-center gap-6 pb-8 border-b"><div class="w-24 h-24 rounded-[32px] bg-slate-50 flex items-center justify-center text-3xl font-bold text-accent initials-avatar-large shadow-inner text-primary">MR</div><h4 class="serif text-3xl profile-name-display font-bold text-primary">Marco Rossi</h4></div><div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-primary"><div><label class="text-[9px] font-bold uppercase text-slate-400 block mb-1">Name</label><input type="text" id="profile-name-input" value="${state.profile.name}" class="w-full bg-slate-50 border rounded-xl px-4 py-3 text-sm outline-none focus:border-accent text-primary"></div><div><label class="text-[9px] font-bold uppercase text-slate-400 block mb-1">Email</label><input type="email" id="profile-email-input" value="${state.profile.email}" class="w-full bg-slate-50 border rounded-xl px-4 py-3 text-sm outline-none focus:border-accent text-primary"></div></div><button onclick="saveProfileSettings()" class="bg-primary text-white px-8 py-4 rounded-2xl font-bold text-sm shadow-xl uppercase tracking-widest text-white">Commit Changes</button></div><div class="glass-card rounded-[32px] overflow-hidden text-primary"><div class="p-6 bg-slate-50 border-b flex justify-between items-center font-bold text-sm text-primary"><h4>Vault</h4><button onclick="openUploadModal()" class="text-accent text-primary font-bold">+ UPLOAD NEW</button></div><div id="document-vault-list text-primary" class="divide-y text-primary"></div></div></div></div>`;
+            if(v === 'succession') t.innerHTML = `<div class="max-w-4xl mx-auto space-y-10 text-center"><header class="space-y-3 text-primary"><div class="inline-flex items-center gap-2 px-3 py-1 bg-red-100 text-red-700 rounded-full text-[10px] font-bold uppercase tracking-widest"><i class="fa-solid fa-radiation animate-pulse"></i> Locked</div><h2 class="serif text-5xl font-bold">Succession Portal</h2></header><div class="glass-card rounded-[40px] overflow-hidden shadow-2xl text-left"><div class="bg-primary p-10 flex justify-between items-center text-white"><div><p class="text-accent text-[10px] uppercase font-bold mb-1 text-accent font-bold">Settlement window</p><h3 class="text-3xl font-bold serif text-white" id="lock-status-text">11 MONTHS REMAINING</h3></div><i class="fa-solid fa-clock text-3xl text-slate-500"></i></div><div class="p-10 space-y-12 bg-white text-center text-primary"><div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-primary font-bold text-xs uppercase tracking-tighter"><div class="p-8 border-2 border-dashed rounded-[32px] space-y-6 text-primary"><i class="fa-solid fa-file-invoice text-3xl text-slate-300"></i><h4 class="font-bold">1. Death Certificate</h4><button onclick="verifySuccessionKey('cert')" id="btn-cert" class="w-full bg-primary text-white py-4 rounded-2xl font-bold uppercase shadow-lg text-white">Verify</button></div><div id="key-card-notary" class="p-8 border-2 border-dashed rounded-[32px] space-y-6 opacity-40 grayscale pointer-events-none text-primary"><i class="fa-solid fa-signature text-3xl text-slate-300"></i><h4 class="font-bold text-slate-400">2. Notary Signature</h4><button id="btn-notary" class="w-full bg-slate-200 text-slate-400 py-4 rounded-2xl font-bold font-medium text-primary">Awaiting</button></div></div><div id="execution-container" class="bg-slate-50 p-8 rounded-[32px] opacity-40 flex flex-col md:flex-row justify-between items-center gap-8 text-left font-medium text-primary"><div><h5 class="font-bold">Automated Settlement</h5><p class="text-xs text-slate-500">Executing final delivery handshake...</p></div><button id="btn-execute" disabled class="bg-slate-400 text-white px-12 py-5 rounded-2xl font-bold text-lg shadow-xl cursor-not-allowed uppercase text-white">Execute</button></div></div></div></div>`;
+            if(v === 'integrity') t.innerHTML = `<header class="flex justify-between items-start gap-6 text-primary"><h2 class="serif text-4xl font-bold">Node Integrity</h2><span class="px-4 py-2 bg-emerald-100 text-emerald-700 rounded-xl text-xs font-bold uppercase">Compliance Active</span></header><div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10 text-primary"><div class="glass-card p-8 rounded-[40px] space-y-6 text-primary"><h5 class="font-bold uppercase text-[10px] tracking-widest text-slate-400">Node Audit Log (100%)</h5><div class="space-y-4 text-[11px] font-mono text-primary"><div class="p-3 bg-slate-50 border rounded-xl border-slate-100 flex justify-between text-primary font-bold"><span>[09:12:04] KYC Verification Resolved</span><span class="text-success font-bold">SUCCESS</span></div><div class="p-3 bg-slate-50 border rounded-xl border-slate-100 flex justify-between text-primary font-bold"><span>[08:59:12] IT-DE Double Taxation Scan</span><span class="text-success font-bold">CLEARED</span></div></div></div></div>`;
+            if(v === 'heir') t.innerHTML = `<header class="flex justify-between items-end gap-6 text-primary"><h2 class="serif text-4xl font-bold text-primary">Beneficiary Workspace</h2><p class="font-mono text-xs text-slate-400 font-bold">#IT-LEG-882190</p></header><div class="grid grid-cols-1 xl:grid-cols-12 gap-8 text-primary mt-10"><div class="xl:col-span-8 space-y-8 text-primary"><div class="glass-card p-10 rounded-[40px] text-primary"><h4 class="font-bold text-xl mb-12 uppercase text-xs tracking-widest">Pipeline Status</h4><div class="relative flex flex-col gap-12 text-primary"><div class="absolute left-5 top-2 bottom-2 w-0.5 bg-slate-100 -z-0"></div><div class="flex items-start gap-6 relative z-10"><div class="w-10 h-10 rounded-full border-2 border-slate-200 bg-white flex items-center justify-center font-bold text-slate-400 stepper-circle completed">1</div><div><h5 class="font-bold text-sm">Verified</h5></div></div><div class="flex items-start gap-6 relative z-10 text-primary"><div id="heir-step-2-circle" class="w-10 h-10 rounded-full border-2 border-slate-200 bg-white flex items-center justify-center font-bold text-slate-400 stepper-circle">2</div><div><h5 class="font-bold text-sm">Tax Settlement</h5><p id="heir-step-2-status" class="text-[10px] text-slate-400 font-bold uppercase mt-1">Pending</p></div></div></div></div><div class="glass-card p-8 rounded-[40px] bg-slate-50 border-slate-100 text-center space-y-4"> <h5 class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Collaboration Monitor</h5> <p class="text-2xl font-bold serif text-success text-success">Stress: Low</p> <p class="text-xs text-slate-500 font-medium">Transparency protocol active.</p></div></div></div>`;
+            if(v === 'profile') t.innerHTML = `<header class="flex justify-between items-start gap-6 text-primary"><h2 class="serif text-4xl font-bold text-primary">Client Profile</h2><span class="px-4 py-2 bg-emerald-100 text-emerald-700 rounded-xl text-xs font-bold uppercase">Identity Secured</span></header><div class="grid grid-cols-1 xl:grid-cols-12 gap-8 text-primary mt-10"><div class="xl:col-span-8 space-y-8 text-primary"><div class="glass-card p-10 rounded-[40px] space-y-8 text-primary text-primary text-primary"><div class="flex items-center gap-6 pb-8 border-b text-primary"><div class="w-24 h-24 rounded-[32px] bg-slate-50 flex items-center justify-center text-3xl font-bold text-accent initials-avatar-large shadow-inner">MR</div><h4 class="serif text-3xl profile-name-display font-bold">Marco Rossi</h4></div><div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-primary"><div><label class="text-[9px] font-bold uppercase text-slate-400 block mb-1">Name</label><input type="text" id="profile-name-input" value="${state.profile.name}" class="w-full bg-slate-50 border rounded-xl px-4 py-3 text-sm outline-none focus:border-accent"></div><div><label class="text-[9px] font-bold uppercase text-slate-400 block mb-1">Email</label><input type="email" id="profile-email-input" value="${state.profile.email}" class="w-full bg-slate-50 border rounded-xl px-4 py-3 text-sm outline-none focus:border-accent"></div></div><button onclick="saveProfileSettings()" class="bg-primary text-white px-8 py-4 rounded-2xl font-bold text-sm shadow-xl uppercase tracking-widest text-white">Commit Changes</button></div></div></div>`;
         }
     </script>
 </body>
